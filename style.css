@@ -103,23 +103,46 @@ h2 {
     bottom: 0;
     left: 50%;
     padding: 10px 25px;
-    background-color: var(--bgColor);
-    color: var(--name-color);
+    /* background-color: var(--bgColor);
+    color: var(--name-color); */
     border-radius: 30px;
-    transition: var(--transition);
+    /* transition: .5s ease-in; */
     transform: translateZ(75px);
     opacity: 0;
+    
+}
 
+@keyframes btn{
+    0% {
+        background-color: var(--box-bg);
+        opacity: 0;
+        bottom: 0px;
+    }
+    25% {
+        background-color: var(--bgColor);
+        opacity: 1;
+        bottom: 30px;
+    }
+    75% {
+        background-color: var(--box-bg);
+        opacity: .3;
+        bottom: 60px;
+    }
+    100% {
+        background-color: var(--bgColor);
+        opacity: 1;
+        bottom: 30px;
+    }
 }
 
 .box:hover .buy{
-    background-color: var(--hoverColor);
+    animation: btn .8s forwards;
+    /* background-color: var(--hoverColor); */
+    /* background-color: var(--bgColor);
     bottom: 30px;
-    opacity: 1;
+    opacity: 1; */
 }
-/* .buy:hover{
-    background-color: var(--bgColor);
-} */
+
 
 .circle{
     width: 200px;
@@ -165,5 +188,5 @@ h2 {
 
 .mode-switch.active {
     fill: black;
-    stroke: nlack
+    stroke: black
 }
