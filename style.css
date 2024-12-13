@@ -130,7 +130,7 @@ h2 {
     }
     100% {
         background-color: var(--bgColor);
-        opacity: 1;
+        opacity: .6;
         bottom: 30px;
     }
 }
